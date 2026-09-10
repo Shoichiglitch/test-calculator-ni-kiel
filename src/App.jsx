@@ -66,13 +66,19 @@ export default function CalculatorWithSubs() {
     setOperation(null);
     setClearOnNextInput(false);
   };
+  
 
   return (
-    <div className="relative min-h-screen bg-slate-950 flex items-center justify-center p-4 font-sans text-slate-800">
+    <div className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-600 to-cyan-400 flex flex-col items-center justify-center p-4 font-sans text-slate-800">
       
       {/* --- CALCULATOR --- */}
       <div className="w-full max-w-xs bg-slate-900 rounded-3xl p-6 shadow-2xl border border-slate-800">
-        
+      {/*CALCULATOR TITLE*/}
+  <div>
+    <h1 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">
+        CALCU NI KIEL
+      </h1>
+  </div>
         {/* Screen */}
         <div className="bg-slate-950 p-4 rounded-2xl mb-6 text-right border border-slate-800/80">
           <div className="text-slate-500 text-xs h-4 mb-1 font-mono">
@@ -127,56 +133,57 @@ export default function CalculatorWithSubs() {
             </button>
 
             {/* Pricing Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mt-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mt-4">
               
               {/* Basic Plan */}
-              <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl text-left flex flex-col justify-between h-full">
+              <div className="bg-slate-50 border border-slate-200 p-6 h-full rounded-2xl text-left flex flex-col justify-between h-full">
                 <div>
                   <h3 className="text-indigo-600 font-bold text-lg mb-2">Basic Calculator</h3>
-                  <div className="text-3xl font-extrabold text-slate-900 mb-2">₱399<span className="text-sm font-normal text-slate-500">/month</span></div>
+                  <div className="text-3xl font-extrabold text-slate-900 mb-2">₱299<span className="text-sm font-normal text-slate-500">/month</span></div>
                   <p className="text-xs text-slate-500 mb-6">Start exploring millions of calculations with basic features and ads.</p>
                   <ul className="text-xs text-slate-600 space-y-2 mb-6">
                     <li>✓ Ad-supported calculations</li>
                     <li>✓ Not Accurate</li>
                   </ul>
                 </div>
-                <button className="w-full bg-indigo-100 hover:bg-indigo-200 text-indigo-700 font-bold py-2.5 rounded-xl text-sm transition-colors">
+                <button className="w-full mt-auto bg-blue-600 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-400 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-400/40 text-white py-3 rounded-xl transition-all duration-300">
                   Start Basic Plan
                 </button>
               </div>
 
               {/* Premium Plan (Featured) */}
-              <div className="relative bg-slate-950 border-2 border-indigo-500 p-6 rounded-2xl text-left text-white shadow-2xl transform md:-translate-y-2">
+              <div className="relative bg-slate-950 border-2 border-indigo-500 p-6 h-full rounded-2xl flex flex-col text-left text-white shadow-2xl transform md:-translate-y-2">
                 <span className="absolute -top-3 right-6 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-[10px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full shadow-md">
                   Most Popular
                 </span>
                 <h3 className="text-white font-bold text-lg mb-2">Premium Sci-Cal</h3>
-                <div className="text-3xl font-extrabold mb-2">₱799<span className="text-sm font-normal text-purple-400">/month</span></div>
+                <div className="text-3xl font-extrabold mb-2">₱699<span className="text-sm font-normal text-purple-400">/month</span></div>
                 <p className="text-xs text-slate-400 mb-6">Enjoy the full Sci-cal experience with unlimited access and downloads.</p>
                 <ul className="text-xs text-slate-300 space-y-2 mb-6">
                   <li className="text-emerald-400">✓ Ad-free</li>
                   <li className="text-emerald-400">✓ Meet & Greet W/ Einstein</li>
                   <li className="text-emerald-400">✓ Unlimited Error Haha</li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-2.5 rounded-xl text-sm shadow-lg shadow-indigo-500/25 transition-all">
+                <button className="w-full mt-auto bg-blue-600 hover:bg-gradient-to-r w-full bg-blue-600 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-400/40 text-white py-3 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-400/40 text-white py-3 rounded-xl transition-all duration-300">
                   Go Premium
                 </button>
               </div>
 
               {/* Family Plan */}
-              <div className="bg-slate-50 border border-slate-200 p-6 rounded-2xl text-left flex flex-col justify-between h-full">
+              <div className="bg-slate-50 border border-slate-200 p-6 h-full rounded-2xl text-left flex flex-col justify-between h-full">
                 <div>
                   <h3 className="text-indigo-600 font-bold text-lg mb-2">Family</h3>
-                  <div className="text-3xl font-extrabold text-slate-900 mb-2">₱1399<span className="text-sm font-normal text-slate-500">/month</span></div>
+                  <div className="text-3xl font-extrabold text-slate-900 mb-2">₱1999<span className="text-sm font-normal text-slate-500">/month</span></div>
                   <p className="text-xs text-slate-500 mb-6">Enjoy all of the features with a plan for up to 6 family members.</p>
                   <ul className="text-xs text-slate-600 space-y-2 mb-6">
                     <li>✓ All Premium features</li>
                     <li>✓ Up to 6 accounts</li>
                     <li>✓ Individual playlists & libraries</li>
                     <li>✓ Family Mix playlists</li>
+                    <li>✓ Chance to talk again to your greatest love</li>
                   </ul>
                 </div>
-                <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 rounded-xl text-sm transition-colors">
+                <button className="w-full mt-auto bg-blue-600 hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-400 hover:-translate-y-1 hover:shadow-lg hover:shadow-cyan-400/40 text-white py-3 rounded-xl transition-all duration-300">
                   Start Family Plan
                 </button>
               </div>
